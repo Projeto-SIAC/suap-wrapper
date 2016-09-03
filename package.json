@@ -1,0 +1,27 @@
+{
+    "name": "suap-wrapper",
+    "version": "0.1.0",
+    "description": "A wrapper for SUAP API.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Projeto-SIAC/suap-wrapper.git"
+    },
+    "keywords": [
+        "IFRN",
+        "SUAP",
+        "SUAP API"
+    ],
+    "author": "Felipe Pontes <felipemfpontes@gmail.com> (http://felipemfp.github.io)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Projeto-SIAC/suap-wrapper/issues"
+    },
+    "homepage": "https://github.com/Projeto-SIAC/suap-wrapper#readme",
+    "dependencies": {
+        "axios": "^0.14.0"
+    }
+}
