@@ -84,4 +84,4 @@ Veja também a lista de [contribuidores](https://github.com/Projeto-SIAC/suap-wr
 
 ## Licença
 
-Este projeto é licenciado pela Licença MIT - veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+Este projeto é licenciado pela Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
