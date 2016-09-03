@@ -15,7 +15,7 @@ Após isso, você já pode usar o __suap-wrapper__ no seu projeto:
 ```javascript
 'use strict';
 
-import Suap from 'suap';
+const Suap = require('suap-wrapper');
 
 let autenticar = Suap.autenticar('201610140400xx', 'm1nhasenh4');
 
