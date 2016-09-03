@@ -17,15 +17,14 @@ Após isso, você já pode usar o __suap-wrapper__ no seu projeto:
 
 const Suap = require('suap-wrapper');
 
-let autenticar = Suap.autenticar('201610140400xx', 'm1nhasenh4');
+Suap.autenticar('2016012345789', 'minh4senh4', (err, data) => {
+  if (err) {
+    console.log(err.message);
+    return;
+  }
 
-if (autenticar) {
-  autenticar.then((response) => {
-    console.log(`Seu token é: <${response.data.token}>.`);
-  }, (error) => {
-    console.log('Falha na autenticação.')
-  });
-}
+  console.log(`Seu token é: <${data.token}>.`);
+});
 ```
 
 ## Ajudar no desenvolvimento
@@ -74,7 +73,7 @@ Ficaremos muito felizes se você contribuir com este projeto seja enviando _Pull
 
 ## Versionamento
 
-Estamos usando o [SemVer](http://semver.org/) para versionamento. Para ver as versões disponíveis: [tags deste repositório](https://github.com/Projeto-SIAC/suap-wrapper/tags). 
+Estamos usando o [SemVer](http://semver.org/) para versionamento. Para ver as versões disponíveis: [tags deste repositório](https://github.com/Projeto-SIAC/suap-wrapper/tags).
 
 ## Autores
 
