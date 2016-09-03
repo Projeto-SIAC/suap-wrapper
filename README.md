@@ -1,4 +1,6 @@
-# suap-wrapper [![npm version](https://badge.fury.io/js/suap-wrapper.svg)](https://badge.fury.io/js/suap-wrapper)
+# suap-wrapper 
+
+[![Build Status](https://travis-ci.org/Projeto-SIAC/suap-wrapper.svg?branch=master)](https://travis-ci.org/Projeto-SIAC/suap-wrapper) [![Coverage Status](https://coveralls.io/repos/github/Projeto-SIAC/suap-wrapper/badge.svg?branch=master)](https://coveralls.io/github/Projeto-SIAC/suap-wrapper?branch=master) [![npm version](https://badge.fury.io/js/suap-wrapper.svg)](https://badge.fury.io/js/suap-wrapper) 
 
 Wrapper escrito em JavaScript para acessar a [API](https://suap.ifrn.edu.br/api/docs) do __Sistema Unificado de Administração Pública (SUAP)__.
 
