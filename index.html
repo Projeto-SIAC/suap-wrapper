@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>suap-wrapper by Projeto-SIAC</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>suap-wrapper</h1>
+        <p>Wrapper para SUAP API</p>
+
+        <p class="view"><a href="https://github.com/Projeto-SIAC/suap-wrapper">View the Project on GitHub <small>Projeto-SIAC/suap-wrapper</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Projeto-SIAC/suap-wrapper/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Projeto-SIAC/suap-wrapper/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Projeto-SIAC/suap-wrapper">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="suap-wrapper-" class="anchor" href="#suap-wrapper-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>suap-wrapper <a href="https://badge.fury.io/js/suap-wrapper"><img src="https://badge.fury.io/js/suap-wrapper.svg" alt="npm version"></a>
+</h1>
+
+<p>Wrapper escrito em JavaScript para acessar a <a href="https://suap.ifrn.edu.br/api/docs">API</a> do <strong>Sistema Unificado de Administração Pública (SUAP)</strong>.</p>
+
+<h2>
+<a id="usando" class="anchor" href="#usando" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usando</h2>
+
+<p>O <strong>suap-wrapper</strong> está disponibilizado através do <strong>npm</strong> (gerenciado de pacotes para Node.js), então:</p>
+
+<div class="highlight highlight-source-shell"><pre>npm install --save suap-wrapper</pre></div>
+
+<p>Após isso, você já pode usar o <strong>suap-wrapper</strong> no seu projeto:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">'</span>use strict<span class="pl-pds">'</span></span>;
+
+<span class="pl-k">const</span> <span class="pl-c1">Suap</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>suap-wrapper<span class="pl-pds">'</span></span>);
+
+<span class="pl-smi">Suap</span>.<span class="pl-en">autenticar</span>(<span class="pl-s"><span class="pl-pds">'</span>2016012345789<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>minh4senh4<span class="pl-pds">'</span></span>, (<span class="pl-smi">err</span>, <span class="pl-smi">data</span>) <span class="pl-k">=&gt;</span> {
+  <span class="pl-k">if</span> (err) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">err</span>.<span class="pl-smi">message</span>);
+    <span class="pl-k">return</span>;
+  }
+
+  <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">`</span>Seu token é: &lt;<span class="pl-s1"><span class="pl-pse">${</span><span class="pl-smi">data</span>.<span class="pl-smi">token</span><span class="pl-pse">}</span></span>&gt;.<span class="pl-pds">`</span></span>);
+});</pre></div>
+
+<h2>
+<a id="ajudar-no-desenvolvimento" class="anchor" href="#ajudar-no-desenvolvimento" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ajudar no desenvolvimento</h2>
+
+<p>Estas instruções orientarão você sobre como ajudar no desenvolvimento do projeto.</p>
+
+<h3>
+<a id="requisitos" class="anchor" href="#requisitos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requisitos</h3>
+
+<p>Você precisar ter o <a href="https://nodejs.org/en/">Node.js</a> instalado em sua máquina. Após instalar, verifique se <code>node</code> e <code>npm</code> estão no seu <em>path</em>:</p>
+
+<div class="highlight highlight-source-shell"><pre>node --version
+npm --version</pre></div>
+
+<h3>
+<a id="instalando" class="anchor" href="#instalando" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instalando</h3>
+
+<p>Fork e clone o repositório, depois peça para o <code>npm</code> instalar as dependências:</p>
+
+<div class="highlight highlight-source-shell"><pre>git clone https://github.com/seu-usuario/suap-wrapper.git
+<span class="pl-c1">cd</span> suap-wrapper
+npm install</pre></div>
+
+<p>Após estes comandos, você deve ter na sua pasta:</p>
+
+<pre><code>├── index.js
+├── LICENSE
+├── node_modules
+│   └── axios
+├── package.json
+└── README.md
+</code></pre>
+
+<p>Agora é só olhar a documentação da <a href="https://suap.ifrn.edu.br/api/docs">API</a> do SUAP e adicionar novas funcionalidades.</p>
+
+<h2>
+<a id="feito-com" class="anchor" href="#feito-com" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feito com...</h2>
+
+<ul>
+<li><a href="https://github.com/mzabriskie/axios">Axios</a></li>
+</ul>
+
+<h2>
+<a id="contribuição" class="anchor" href="#contribui%C3%A7%C3%A3o" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contribuição</h2>
+
+<p>Ficaremos muito felizes se você contribuir com este projeto seja enviando <em>Pull Request</em> ou notificando bugs pelas <em>Issues</em>.</p>
+
+<h2>
+<a id="versionamento" class="anchor" href="#versionamento" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Versionamento</h2>
+
+<p>Estamos usando o <a href="http://semver.org/">SemVer</a> para versionamento. Para ver as versões disponíveis: <a href="https://github.com/Projeto-SIAC/suap-wrapper/tags">tags deste repositório</a>.</p>
+
+<h2>
+<a id="autores" class="anchor" href="#autores" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Autores</h2>
+
+<ul>
+<li>
+<strong>Felipe Pontes</strong> - <em>Trabalho inicial</em> - <a href="https://github.com/felipemfp">felipemfp</a>
+</li>
+</ul>
+
+<p>Veja também a lista de <a href="https://github.com/Projeto-SIAC/suap-wrapper/contributors">contribuidores</a> que participaram deste projeto.</p>
+
+<h2>
+<a id="licença" class="anchor" href="#licen%C3%A7a" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Licença</h2>
+
+<p>Este projeto é licenciado pela Licença MIT - veja o arquivo <a href="LICENSE">LICENSE</a> para mais detalhes.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Projeto-SIAC">Projeto-SIAC</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
