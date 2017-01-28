@@ -29,6 +29,7 @@
   "devDependencies": {
     "ava": "^0.16.0",
     "coveralls": "^2.11.12",
+    "nock": "^9.0.2",
     "nyc": "^8.1.0"
   }
 }
