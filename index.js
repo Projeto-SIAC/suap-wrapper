@@ -6,23 +6,26 @@ const api = axios.create({
   baseURL: 'https://suap.ifrn.edu.br/api/'
 })
 
-const autenticar = (matricula, senha, callback) => {
-  if (!matricula || !senha || !callback) {
-    return callback(new Error('Argumentos inválidos.'))
+const autenticar = (matricula, senha) => {
+  if (!matricula || !senha) {
+    return new Promise(function(resolve, reject) {
+      reject(Error('Argumentos inválidos.'))
+    })
   }
-  api.post('autenticacao/token/', {
+
+  return api.post('autenticacao/token/', {
       username: matricula,
       password: senha
     })
     .then((response) => {
       api.defaults.headers.common['Authorization'] = `Token ${response.data.token}`
-      return callback(null, response.data);
+      return response.data.token
     })
     .catch((error) => {
       if (error.response) {
-        return callback(new Error('Falha na autenticação.'))
+        throw new Error('Falha na autenticação.')
       }
-      return callback(new Error('Falha na tentativa de autenticação.'))
+      throw new Error('Falha na tentativa de autenticação.')
     })
 }
 
