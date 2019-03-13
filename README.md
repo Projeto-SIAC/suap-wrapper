@@ -79,7 +79,8 @@ Estamos usando o [SemVer](http://semver.org/) para versionamento. Para ver as ve
 
 ## Autores
 
-* **Felipe Pontes** - *Trabalho inicial* - [felipemfp](https://github.com/felipemfp)
+* **Felipe Pontes** - [felipemfp](https://github.com/felipemfp)
+* **Maykon Oliveira** - [maykon-oliveira](https://github.com/maykon-oliveira)
 
 Veja também a lista de [contribuidores](https://github.com/Projeto-SIAC/suap-wrapper/contributors) que participaram deste projeto.
 
